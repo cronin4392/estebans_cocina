@@ -7,6 +7,6 @@ def index(request):
     context = {'recipe_list': recipe_list}
     return render(request, "website/index.html", context)
 
-def recipe(request, recipe_id):
-    recipe = get_object_or_404(pk=recipe_id)
+def recipe(request, recipe_slug):
+    recipe = get_object_or_404(Recipe, slug=recipe_slug)
     return render(request, 'website/recipe/index.html', {'recipe': recipe})
