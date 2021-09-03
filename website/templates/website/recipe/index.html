@@ -1,5 +1,8 @@
 {% extends "../layout.html" %}
-{% block title %}List page{% endblock %}
+{% block layout %}detail{% endblock %}
+{% block title %}{{ recipe }} - Esteban's Cocina{% endblock %}
 {% block content %}
-  {{ recipe }}
+  <header>
+    <h1 class="recipe-detail__title">{{ recipe }}</h1>
+  </header>
 {% endblock %}

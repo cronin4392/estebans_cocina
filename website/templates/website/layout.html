@@ -3,13 +3,25 @@
 <html lang="en">
   <head>
     <title>{% block title %}Esteban's Cocina{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipe-list.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipe-detail.css' %}">
   </head>
-  <body>
-    <nav><a href="/">Home</a></nav>
-    <main>
+  <body data-layout="{% block layout %}{% endblock %}">
+    <nav class="nav">
+      <h1>
+        <a href="/">
+          Esteban's <br />Cocina
+          <span class="icon">味</span>
+        </a>
+      </h1>
+    </nav>
+    <main class="main">
       {% block content %}{% endblock %}
     </main>
-    <footer>est. 2021</footer>
+    <footer class="footer">est. 2021</footer>
   </body>
 </html>

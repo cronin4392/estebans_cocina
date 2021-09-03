@@ -1,12 +1,15 @@
 {% extends "./layout.html" %}
-{% block title %}List page{% endblock %}
+{% block layout %}landing{% endblock %}
+{% block title %}Esteban's Cocina{% endblock %}
 {% block content %}
     {% if recipe_list %}
-        <ul>
+        <ol class="recipe-list">
         {% for recipe in recipe_list %}
-<li><a href="{% url 'recipe' recipe.slug %}">{{ recipe.title }}</a></li>
+            <li class="recipe-list__item">
+                <a class="recipe-list__item__link" href="{% url 'recipe' recipe.slug %}">{{ recipe.title }}</a>
+            </li>
         {% endfor %}
-        </ul>
+        </ol>
     {% else %}
         <p>No recipes are available.</p>
     {% endif %}

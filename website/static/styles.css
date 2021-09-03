@@ -1,3 +1,101 @@
+:root {
+  --off-white: #fcf8f0;
+  --light-red: #ECC3B3;
+  --font-serif: 'Shippori Mincho', serif;
+  --hover-opacity: 0.5;
+  --hover-opacity-duration: 0.5s;
+  --hover-rotate: -30deg;
+  --hover-rotate-duration: 1.5s;
+  --h1-font-size: 6rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
-  opacity: 0.2;
+  margin: 0;
+  background-color: var(--off-white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 5rem 6rem 4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+.nav {
+  margin-bottom: var(--nav-margin-bottom, 2rem);
+}
+
+.nav h1 {
+  font-size: var(--logo-font-size, 3rem);
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+}
+
+body[data-layout="landing"] {
+  --logo-font-size: var(--h1-font-size);
+  --nav-margin-bottom: 10rem;
+}
+
+.nav h1 a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity var(--hover-opacity-duration);
+}
+
+.nav h1 a:hover {
+  opacity: var(--hover-opacity);
+}
+
+.nav h1 .icon {
+  --size: 1.5em;
+  color: var(--light-red);
+  font-weight: 400;
+  position: absolute;
+  right: calc(var(--size) / -2);
+  bottom: calc(var(--size) / -2);
+  border: 0.042em solid currentColor;
+  height: var(--size);
+  width: var(--size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--hover-rotate-duration);
+}
+
+.nav h1 a:hover .icon {
+  transform: rotate(var(--hover-rotate));
+}
+
+.main {
+  flex-grow: 1;
+  max-width: 60rem;
+}
+
+.footer {
+  font-family: var(--font-serif);
 }

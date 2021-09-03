@@ -1,0 +1,4 @@
+.recipe-detail__title {
+  font-size: var(--h1-font-size);
+  margin: 10rem 0 2rem;
+}
