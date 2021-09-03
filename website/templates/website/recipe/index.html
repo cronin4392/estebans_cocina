@@ -5,5 +5,21 @@
   <header class="recipe-detail__header">
     <p class="recipe-detail__type">{{ recipe.dish_type }}</p>
     <h1 class="recipe-detail__title">{{ recipe.title }}</h1>
+    <section class="recipe-detail__section">
+      <h2 class="recipe-detail__section__title">Ingredients</h2>
+      <ul class="recipe-detail__ingredients">
+      {% for ingredient in recipe.ingredient_set.all %}
+        <li class="recipe-detail__ingredient">
+          {% if ingredient.amount %}
+          <span>{{ ingredient.amount | floatformat }}</span>
+          {% endif %}
+          {% if ingredient.unit %}
+          <span>{{ ingredient.get_unit_display }}</span>
+          {% endif %}
+          <span>{{ ingredient.name }}</span>
+        </li>
+      {% endfor %}
+      </ul>
+    </section>
   </header>
 {% endblock %}
