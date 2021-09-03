@@ -45,9 +45,11 @@
 }
 
 .recipe-list__item__link {
+  display: block;
   text-decoration: none;
   color: inherit;
   font-family: var(--font-serif);
+  line-height: 1.4;
 }
 
 .recipe-list__item__link:before {
