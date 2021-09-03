@@ -1,4 +1,16 @@
+.recipe-detail__header {
+  margin: 10rem 0 2rem;
+}
+
 .recipe-detail__title {
   font-size: var(--h1-font-size);
-  margin: 10rem 0 2rem;
+  margin: 0;
+}
+
+.recipe-detail__type {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  margin-bottom: 0.2rem;
+  color: var(--light-red);
 }

@@ -6,6 +6,7 @@
         <ol class="recipe-list">
         {% for recipe in recipe_list %}
             <li class="recipe-list__item">
+                <span class="recipe-list__item__type">{{ recipe.dish_type }}</span>
                 <a class="recipe-list__item__link" href="{% url 'recipe' recipe.slug %}">{{ recipe.title }}</a>
             </li>
         {% endfor %}

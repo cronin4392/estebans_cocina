@@ -60,3 +60,12 @@
   bottom: 0;
   left: 0;
 }
+
+.recipe-list__item__type {
+  font-size: 0.65em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  margin-bottom: 0.2rem;
+  color: var(--light-red);
+}
