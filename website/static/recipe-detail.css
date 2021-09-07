@@ -5,6 +5,7 @@
 .recipe-detail__title {
   font-size: var(--h1-font-size);
   margin: 0;
+  margin-left: -0.0675em;
 }
 
 .recipe-detail__type {
@@ -21,12 +22,20 @@
 }
 
 .recipe-detail__section__title {
+  font-size: 3rem;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6em;
+}
+
+.recipe-detail__section__content {
+  padding-left: 2rem;
+  border-left: 2px solid var(--light-red);
+  display: inline-block;
+  width: 100%;
 }
 
 .recipe-detail__ingredients {
-  --row-gap: 0.5rem;
+  --row-gap: 0.75rem;
   list-style: none;
   margin: 0;
   padding: 0;
